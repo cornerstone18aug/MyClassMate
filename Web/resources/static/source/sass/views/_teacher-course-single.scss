@@ -1,0 +1,159 @@
+.labs-list {
+  @include list-float();
+  @include list-reset();
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+
+  li {
+
+    a {
+      display: inline-block;
+      padding: 15px 30px;
+      margin-right: 20px;
+      background-color: $brand-blue;
+      font-family: $proza;
+      font-size: em(16px);
+      text-transform: uppercase;
+      color: #FFF;
+      @include border-radius(5px);
+      @include transition(all 200ms ease);
+
+      &:hover {
+        background-color: lighten($brand-blue, 10%);
+        text-decoration: none;
+      }
+    }
+
+    &.active {
+
+      a {
+        background-color: darken($brand-blue, 10%);
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.student-item {
+
+  h4, p, .glyphicon::before {
+    color: #FFF;
+  }
+
+  h4 {
+    font-size: em(16px);
+    margin: 0 0 10px;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .well {
+    padding: 20px;
+    background-color: $brand-success;
+
+    &.student-delayed {
+      background-color: $brand-red;
+    }
+  }
+
+  .glyphicon {
+
+    &:before {
+      font-size: 40px;
+    }
+  }
+
+  .glyphicon-ok-circle {
+
+    &:before {
+      //color: $brand-success;
+    }
+  }
+
+  .glyphicon-alert {
+
+    &:before {
+      //color: $brand-red;
+    }
+  }
+}
+
+.student-deliver {
+  margin-top: -20px;
+
+  .well {
+    text-align: center;
+
+    .btn {
+      width: 100%;
+    }
+  }
+}
+
+.task-title {
+  margin: 30px 0;
+  text-align: center;
+
+  h2 {
+    margin: 0 0 20px;
+  }
+
+  p {
+    margin: 0 0 10px;
+  }
+
+  .due-date {
+    span {
+      color: $brand-blue;
+      font-weight: 700;
+    }
+  }
+}
+
+.new-task {
+
+  .panel {
+    border: none;
+    background-color: $brand-orange;
+    color: #FFF;
+    font-size: em(18px);
+    @include transition(all 200ms ease);
+
+    span {
+      float: right;
+
+      &:before {
+        font-size: 25px;
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+
+    &.collapsed {
+      text-decoration: none;
+    }
+
+    &:hover {
+      text-decoration: none;
+
+      .panel {
+        background-color: darken($brand-orange, 10%);
+      }
+    }
+  }
+
+  .btn-primary {
+    background-color: $brand-orange;
+    border: none;
+    @include transition(all 200ms ease);
+
+    &:hover {
+      background-color: darken($brand-orange, 10%);
+    }
+  }
+}

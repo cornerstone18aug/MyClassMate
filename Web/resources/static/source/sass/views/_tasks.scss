@@ -1,0 +1,58 @@
+.tasks-list {
+
+  p.list-group-item-text {
+    margin-bottom: 10px;
+
+    span {
+      font-weight: 700;
+    }
+
+    &.due-date {
+
+      span {
+        color: $brand-blue;
+      }
+    }
+
+    &.status {
+      display: inline;
+      padding: 5px 10px;
+      color: #FFF;
+      @include border-radius(5px);
+    }
+
+    &.status-ongoing {
+      background-color: $brand-orange;
+    }
+
+    &.status-delayed {
+      background-color: $brand-red;
+    }
+
+    &.status-delivered {
+      background-color: $brand-success;
+    }
+  }
+}
+
+.task-deliver {
+  @extend .clearfix;
+
+  .well {
+    @extend .clearfix;
+    width: 100%;
+  }
+}
+
+.btn-task {
+  width: 110px;
+  @include transition(all 200ms ease);
+
+  &:hover {
+    background-color: lighten($brand-blue, 5%);
+  }
+
+  span {
+    font-size: 25px;
+  }
+}
