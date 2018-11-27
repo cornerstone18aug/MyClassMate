@@ -13,9 +13,9 @@ open class User(id: Int? = -1) : Entity<User>(id) {
     var passhash: String? = ""
 
     companion object : IntIdTable("users") {
-        val name = ca.myclassmate.data.entities.UserTable.varchar("name", 255).nullable()
-        val email = ca.myclassmate.data.entities.UserTable.varchar("email", 255).nullable()
-        val passhash = ca.myclassmate.data.entities.UserTable.varchar("passhash", 255).nullable()
+        val name = this.varchar("name", 255).nullable()
+        val email = this.varchar("email", 255).nullable()
+        val passhash = this.varchar("passhash", 255).nullable()
         // val college = Data.reference("college_id", Colleges).nullable()
     }
 }
